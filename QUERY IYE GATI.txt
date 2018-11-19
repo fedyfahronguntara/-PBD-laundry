@@ -1,0 +1,52 @@
+
+select nama,id_member,jenis_layanan,avg(harga)from transaksi join coustomer using (no_coustomer) 
+join member using (no_coustomer) join layanan using(kode_layanan)
+having avg(harga)<(select avg(harga) from transaksi ) group by nama,id_member,jenis_layanan;
+
+
+select count(no_coustomer) || ' kali' as sebanyak,id_member,nama,alamat,id_kasir
+from transaksi  
+join coustomer using (no_coustomer)  
+join member  using (no_coustomer)
+natural join menentukan
+having count(no_coustomer)=
+(select max(count(no_coustomer)) from transaksi group by no_coustomer) 
+group by no_coustomer,nama,alamat,id_member,id_kasir;
+
+
+
+select no_coustomer,id_member,nama,alamat,sum(harga) from transaksi 
+natural join menentukan  join coustomer using(no_coustomer) join member using(no_coustomer)
+group by nama,alamat,no_coustomer,id_member  
+having sum(harga)=
+(select max(sum(harga)) from transaksi group by nama,alamat,no_coustomer );
+
+
+
+select no_coustomer,id_member,nama,nama_kasir,harga,status_pembayaran
+from transaksi join coustomer using (no_coustomer) join kasir using(id_kasir) 
+join member using(no_coustomer)
+where status_pembayaran='Belum Lunas'  and harga=(select max(harga) from transaksi);
+
+
+select no_coustomer,nama,alamat,sum(harga),sum(harga)*diskon as "CASH BACK" from transaksi 
+natural join menentukan  join coustomer using(no_coustomer) join coustomer_biasa using(no_coustomer) 
+group by nama,alamat,no_coustomer,diskon
+having sum(harga)=
+(select max(sum(harga)) from transaksi group by nama,alamat,no_coustomer ) ;
+
+
+
+
+select nama_petugas,id_petugas,kode_layanan
+from dikerjakan 
+join petugas using (id_petugas) 
+natural join menggunakan 
+join layanan using(kode_layanan)
+where  kode_parfum in (select kode_parfum from parfum where nama_parfum='Neo');
+
+
+select no_coustomer,id_member,nama,id_kasir,jenis_layanan,tgl_transaksi 
+from transaksi join coustomer using(no_coustomer) 
+join member using(no_coustomer) join layanan using (kode_layanan)
+where id_kasir in (select id_kasir from kasir where nama_kasir='Tommy');

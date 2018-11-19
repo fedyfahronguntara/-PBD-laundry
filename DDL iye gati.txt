@@ -1,0 +1,146 @@
+CREATE TABLE coustomer (
+    no_coustomer   VARCHAR2(15) NOT NULL,
+    nama           VARCHAR2(20),
+    alamat         VARCHAR2(20)
+);
+
+ALTER TABLE coustomer ADD CONSTRAINT coustomer_pk PRIMARY KEY ( no_coustomer );
+
+CREATE TABLE coustomer_biasa (
+    no_coustomer   VARCHAR2(15) NOT NULL,
+    diskon         NUMBER
+);
+
+ALTER TABLE coustomer_biasa ADD CONSTRAINT coustomer_biasa_pk PRIMARY KEY ( no_coustomer );
+
+CREATE TABLE dikerjakan (
+    id_petugas     VARCHAR2(15) NOT NULL,
+    kode_layanan   VARCHAR2(15) NOT NULL,
+    kode_parfum    VARCHAR2(15) NOT NULL
+);
+
+
+
+CREATE TABLE kasir (
+    id_kasir   VARCHAR2(15) NOT NULL,
+    nama_kasir       VARCHAR2(20)
+);
+
+ALTER TABLE kasir ADD CONSTRAINT kasir_pk PRIMARY KEY ( id_kasir );
+
+CREATE TABLE layanan (
+    kode_layanan    VARCHAR2(15) NOT NULL,
+    jenis_layanan   VARCHAR2(20)
+);
+
+ALTER TABLE layanan ADD CONSTRAINT layanan_pk PRIMARY KEY ( kode_layanan );
+
+CREATE TABLE loker (
+    id_loker   VARCHAR2(15) NOT NULL,
+    no_loker   VARCHAR2(4)
+);
+
+ALTER TABLE loker ADD CONSTRAINT loker_pk PRIMARY KEY ( id_loker );
+
+CREATE TABLE member (
+    id_member      VARCHAR2(15) NOT NULL,
+    no_coustomer   VARCHAR2(15) NOT NULL
+    
+);
+
+ALTER TABLE member ADD CONSTRAINT member_pk PRIMARY KEY ( id_member );
+
+CREATE TABLE menentukan (
+    id_kasir   VARCHAR2(15) NOT NULL,
+    id_loker   VARCHAR2(15) NOT NULL
+);
+
+CREATE TABLE menggunakan (
+    kode_layanan   VARCHAR2(15) NOT NULL,
+    kode_parfum    VARCHAR2(15) NOT NULL
+);
+
+CREATE TABLE parfum (
+    kode_parfum   VARCHAR2(15) NOT NULL,
+    nama_parfum   VARCHAR2(20)
+);
+
+ALTER TABLE parfum ADD CONSTRAINT parfum_pk PRIMARY KEY ( kode_parfum );
+
+CREATE TABLE petugas (
+    id_petugas     VARCHAR2(15) NOT NULL,
+    nama_petugas   VARCHAR2(20) NOT NULL
+);
+
+ALTER TABLE petugas ADD CONSTRAINT petugas_pk PRIMARY KEY ( id_petugas );
+
+CREATE TABLE transaksi (
+    id_transaksi        VARCHAR2(15) NOT NULL,
+    no_coustomer        VARCHAR2(15) NOT NULL,
+    id_kasir            VARCHAR2(15) NOT NULL,
+    id_loker            VARCHAR2(15) NOT NULL,
+    kode_layanan        VARCHAR2(15) NOT NULL,
+    kode_parfum         VARCHAR2(15) NOT NULL,
+    harga               NUMBER,
+    pengambilan         DATE,
+    status_pembayaran   VARCHAR2(15),
+    tgl_transaksi       DATE
+);
+
+ALTER TABLE transaksi ADD CONSTRAINT transaksi_pk PRIMARY KEY ( id_transaksi );
+
+
+ALTER TABLE menggunakan ADD CONSTRAINT menggunakan_pk PRIMARY KEY ( kode_layanan,kode_parfum );
+
+ALTER TABLE menentukan ADD CONSTRAINT menentukan_pk PRIMARY KEY ( id_kasir,id_loker );
+
+ALTER TABLE dikerjakan
+    ADD CONSTRAINT dikerjakan_pk PRIMARY KEY ( id_petugas,kode_layanan,kode_parfum );
+    
+ALTER TABLE coustomer_biasa
+    ADD CONSTRAINT coustomer_biasa_coustomer_fk FOREIGN KEY ( no_coustomer )
+        REFERENCES coustomer ( no_coustomer );
+
+ALTER TABLE dikerjakan
+    ADD CONSTRAINT dikerjakan_menggunakan_fk FOREIGN KEY ( kode_layanan,kode_parfum )
+        REFERENCES menggunakan ( kode_layanan,kode_parfum );
+
+ALTER TABLE dikerjakan
+    ADD CONSTRAINT dikerjakan_petugas_fk FOREIGN KEY ( id_petugas )
+        REFERENCES petugas ( id_petugas );
+
+ALTER TABLE member
+    ADD CONSTRAINT member_coustomer_fk FOREIGN KEY ( no_coustomer )
+        REFERENCES coustomer ( no_coustomer );
+        
+
+ALTER TABLE menentukan
+    ADD CONSTRAINT menentukan_kasir_fk FOREIGN KEY ( id_kasir )
+        REFERENCES kasir ( id_kasir );
+
+ALTER TABLE menentukan
+    ADD CONSTRAINT menentukan_loker_fk FOREIGN KEY ( id_loker )
+        REFERENCES loker ( id_loker );
+
+ALTER TABLE menggunakan
+    ADD CONSTRAINT menggunakan_layanan_fk FOREIGN KEY ( kode_layanan )
+        REFERENCES layanan ( kode_layanan );
+
+ALTER TABLE menggunakan
+    ADD CONSTRAINT menggunakan_parfum_fk FOREIGN KEY ( kode_parfum )
+        REFERENCES parfum ( kode_parfum );
+
+ALTER TABLE transaksi
+    ADD CONSTRAINT transaksi_coustomer_fk FOREIGN KEY ( no_coustomer )
+        REFERENCES coustomer ( no_coustomer );
+
+ALTER TABLE transaksi
+    ADD CONSTRAINT transaksi_menentukan_fk FOREIGN KEY ( id_kasir,id_loker )
+        REFERENCES menentukan ( id_kasir,id_loker );
+
+ALTER TABLE transaksi
+    ADD CONSTRAINT transaksi_menggunakan_fk FOREIGN KEY ( kode_layanan,kode_parfum )
+        REFERENCES menggunakan ( kode_layanan,kode_parfum );
+        
+    
+        

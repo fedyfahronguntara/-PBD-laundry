@@ -1,0 +1,212 @@
+alter session set nls_date_format = 'dd/mon/yyyy';
+alter session set nls_date_language = 'english';
+
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs1','fedy','arjuna 2');
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs2','Fairus','Radio Palasari');
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs3','Rifki','Pondok Aladin 2');
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs4','Farhan','Metro');
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs5','Taris','Komplek Sukapura');
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs6','Arie','Sukabirus 6');
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs7','Ananta','Cikoneng');
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs8','Fahmi','Cikoneng');
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs9','Iqbal','Sukapura');
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs10','Egha','Sukabirus');
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs11','Rino','Perumahan Buah Batu');
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs12','Rey','Sukabirus');
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs13','Tito','sUKABIRUS 2');
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs14','Syahreza','Metro 3');
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs15','Naufal','Ciganitri');
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs16','Zain','GBA');
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs17','Anton','Cibiru');
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs18','Axel','Sukabirus');
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs19','Fikri','Sukabirus');
+INSERT INTO coustomer (no_coustomer,nama,alamat)   VALUES('cs20','Yusuf','Sukabirus');
+
+
+INSERT INTO  coustomer_biasa (no_coustomer,diskon)    VALUES('cs10',0.1); 
+INSERT INTO  coustomer_biasa (no_coustomer,diskon)    VALUES('cs3',0.1); 
+INSERT INTO  coustomer_biasa (no_coustomer,diskon)    VALUES('cs20',0.1); 
+INSERT INTO  coustomer_biasa (no_coustomer,diskon)    VALUES('cs11',0.1); 
+INSERT INTO  coustomer_biasa (no_coustomer,diskon)    VALUES('cs14',0.1); 
+INSERT INTO  coustomer_biasa (no_coustomer,diskon)    VALUES('cs15',0.1); 
+INSERT INTO  coustomer_biasa (no_coustomer,diskon)    VALUES('cs16',0.1); 
+INSERT INTO  coustomer_biasa (no_coustomer,diskon)    VALUES('cs17',0.1); 
+INSERT INTO  coustomer_biasa (no_coustomer,diskon)    VALUES('cs18',0.1); 
+INSERT INTO  coustomer_biasa (no_coustomer,diskon)    VALUES('cs19',0.1); 
+
+
+INSERT INTO member (id_member,no_coustomer)     VALUES('m1','cs1'); 
+INSERT INTO member (id_member,no_coustomer)     VALUES('m2','cs4'); 
+INSERT INTO member (id_member,no_coustomer)     VALUES('m3','cs5'); 
+INSERT INTO member (id_member,no_coustomer)     VALUES('m4','cs9'); 
+INSERT INTO member (id_member,no_coustomer)     VALUES('m5','cs2'); 
+INSERT INTO member (id_member,no_coustomer)     VALUES('m6','cs6'); 
+INSERT INTO member (id_member,no_coustomer)     VALUES('m7','cs10'); 
+INSERT INTO member (id_member,no_coustomer)     VALUES('m8','cs8'); 
+INSERT INTO member (id_member,no_coustomer)     VALUES('m9','cs12'); 
+INSERT INTO member (id_member,no_coustomer)     VALUES('m10','cs13'); 
+
+
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k1','Kaka');    
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k2','Ajie'); 
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k3','Evans'); 
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k4','Gandhi'); 
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k5','Kuncoro'); 
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k6','Hilmi');    
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k7','Bosca'); 
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k8','Imad'); 
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k9','Gaza'); 
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k10','Ulum'); 
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k11','Timoty');    
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k12','Ujang'); 
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k13','Rizal'); 
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k14','Fajar'); 
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k15','Faruq'); 
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k16','Rafi');    
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k17','Rama'); 
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k18','Andika'); 
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k19','Akbar'); 
+INSERT INTO kasir (id_kasir,nama_kasir)      VALUES('k20','Tommy'); 
+
+
+INSERT INTO loker (id_loker,no_loker)     VALUES('l1','001'); 
+INSERT INTO loker (id_loker,no_loker)     VALUES('l2','002'); 
+INSERT INTO loker (id_loker,no_loker)     VALUES('l3','003'); 
+INSERT INTO loker (id_loker,no_loker)     VALUES('l4','004'); 
+INSERT INTO loker (id_loker,no_loker)     VALUES('l5','005'); 
+INSERT INTO loker (id_loker,no_loker)     VALUES('l6','006'); 
+INSERT INTO loker (id_loker,no_loker)     VALUES('l7','007'); 
+INSERT INTO loker (id_loker,no_loker)     VALUES('l8','008'); 
+INSERT INTO loker (id_loker,no_loker)     VALUES('l9','009'); 
+INSERT INTO loker (id_loker,no_loker)     VALUES('l10','010'); 
+INSERT INTO loker (id_loker,no_loker)     VALUES('l11','011'); 
+INSERT INTO loker (id_loker,no_loker)     VALUES('l12','012'); 
+INSERT INTO loker (id_loker,no_loker)     VALUES('l13','013'); 
+INSERT INTO loker (id_loker,no_loker)     VALUES('l14','014'); 
+INSERT INTO loker (id_loker,no_loker)     VALUES('l15','015'); 
+INSERT INTO loker (id_loker,no_loker)     VALUES('l16','016'); 
+INSERT INTO loker (id_loker,no_loker)     VALUES('l17','017'); 
+INSERT INTO loker (id_loker,no_loker)     VALUES('l18','018'); 
+INSERT INTO loker (id_loker,no_loker)     VALUES('l19','019'); 
+INSERT INTO loker (id_loker,no_loker)     VALUES('l20','020'); 
+
+INSERT INTO menentukan (id_kasir,id_loker)     VALUES('k20','l1'); 
+INSERT INTO menentukan (id_kasir,id_loker)     VALUES('k19','l2'); 
+INSERT INTO menentukan (id_kasir,id_loker)     VALUES('k17','l3'); 
+INSERT INTO menentukan (id_kasir,id_loker)     VALUES('k9','l4'); 
+INSERT INTO menentukan (id_kasir,id_loker)     VALUES('k6','l5'); 
+INSERT INTO menentukan (id_kasir,id_loker)     VALUES('k12','l6'); 
+INSERT INTO menentukan (id_kasir,id_loker)     VALUES('k15','l6'); 
+INSERT INTO menentukan (id_kasir,id_loker)     VALUES('k20','l7'); 
+INSERT INTO menentukan (id_kasir,id_loker)     VALUES('k16','l7'); 
+INSERT INTO menentukan (id_kasir,id_loker)     VALUES('k13','l8'); 
+
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly1','Selimut'); 
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly2','Tas'); 
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly3','Sepatu'); 
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly4','Kemeja'); 
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly5','Pakaian Dalam'); 
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly6','Celana Dalam'); 
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly7','Jas'); 
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly8','Dasi'); 
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly9','Kaos Kaki'); 
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly10','Kaos'); 
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly11','Sajadah'); 
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly12','Mukenah'); 
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly13','Sarung'); 
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly14','Sarung Bantal'); 
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly15','Sarung Selimut'); 
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly16','Kerudung'); 
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly17','Karpet'); 
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly18','Boneka'); 
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly19','Korden'); 
+INSERT INTO layanan (kode_layanan,jenis_layanan)       VALUES('ly20','Baju Wedding');
+
+
+
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p1','Stella'); 
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p2','Green Tea'); 
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p3','Polo Sport'); 
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p4','Rapika'); 
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p5','Melati'); 
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p6','Jeruk'); 
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p7','Snapy'); 
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p8','Casabelangka'); 
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p9','Glade'); 
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p10','Dowwny'); 
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p11','Strom'); 
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p12','Ulty'); 
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p13','Beng-beng'); 
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p14','Neo'); 
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p15','Nion'); 
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p16','Bubble'); 
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p17','Coki-coki'); 
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p18','Classic'); 
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p19','Club'); 
+INSERT INTO parfum (kode_parfum,nama_parfum)     VALUES('p20','Aqua'); 
+
+INSERT INTO menggunakan (kode_layanan, kode_parfum)   VALUES('ly1','p20');    
+INSERT INTO menggunakan (kode_layanan, kode_parfum)   VALUES('ly5','p18'); 
+INSERT INTO menggunakan (kode_layanan, kode_parfum)   VALUES('ly7','p1'); 
+INSERT INTO menggunakan (kode_layanan, kode_parfum)   VALUES('ly3','p11'); 
+INSERT INTO menggunakan (kode_layanan, kode_parfum)   VALUES('ly19','p10'); 
+INSERT INTO menggunakan (kode_layanan, kode_parfum)   VALUES('ly9','p18');    
+INSERT INTO menggunakan (kode_layanan, kode_parfum)   VALUES('ly8','p20'); 
+INSERT INTO menggunakan (kode_layanan, kode_parfum)   VALUES('ly5','p20'); 
+INSERT INTO menggunakan (kode_layanan, kode_parfum)   VALUES('ly16','p14'); 
+INSERT INTO menggunakan (kode_layanan, kode_parfum)   VALUES('ly17','p14'); 
+
+
+
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt1','Syarif'); 
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt2','Gundar'); 
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt3','Tanjung'); 
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt4','Arif'); 
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt5','Arin'); 
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt6','Hamzah'); 
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt7','Ifal'); 
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt8','Akmal'); 
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt9','Fatur'); 
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt10','Syamil'); 
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt11','Dimas'); 
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt12','Harun'); 
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt13','Bagas'); 
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt14','Holly'); 
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt15','Genza'); 
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt16','Ansel'); 
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt17','Dewa'); 
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt18','Dwiki'); 
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt19','Agung'); 
+INSERT INTO petugas (id_petugas,nama_petugas)     VALUES('pt20','Rozak'); 
+
+
+INSERT INTO dikerjakan (id_petugas,kode_layanan,kode_parfum )   VALUES('pt1','ly1','p20'); 
+INSERT INTO dikerjakan (id_petugas,kode_layanan,kode_parfum )   VALUES('pt1','ly5','p18'); 
+INSERT INTO dikerjakan (id_petugas,kode_layanan,kode_parfum )   VALUES('pt2','ly7','p1'); 
+INSERT INTO dikerjakan (id_petugas,kode_layanan,kode_parfum )   VALUES('pt4','ly3','p11'); 
+INSERT INTO dikerjakan (id_petugas,kode_layanan,kode_parfum )   VALUES('pt5','ly19','p10'); 
+INSERT INTO dikerjakan (id_petugas,kode_layanan,kode_parfum )   VALUES('pt20','ly16','p14'); 
+INSERT INTO dikerjakan (id_petugas,kode_layanan,kode_parfum )   VALUES('pt10','ly8','p20'); 
+INSERT INTO dikerjakan (id_petugas,kode_layanan,kode_parfum )   VALUES('pt11','ly5','p20'); 
+INSERT INTO dikerjakan (id_petugas,kode_layanan,kode_parfum )   VALUES('pt2','ly16','p14'); 
+INSERT INTO dikerjakan (id_petugas,kode_layanan,kode_parfum )   VALUES('pt7','ly17','p14'); 
+
+
+
+INSERT INTO transaksi (id_transaksi,no_coustomer,id_kasir,id_loker,kode_layanan,kode_parfum,harga ,pengambilan,status_pembayaran,tgl_transaksi )      VALUES('t1','cs1','k20','l1','ly1','p20',23000,'26/NOV/2017','Lunas','24/NOV/2017');               
+INSERT INTO transaksi (id_transaksi,no_coustomer,id_kasir,id_loker,kode_layanan,kode_parfum,harga ,pengambilan,status_pembayaran,tgl_transaksi )      VALUES('t2','cs5','k19','l2','ly5','p18',30000,'26/NOV/2017','Belum Lunas','24/NOV/2017');               
+INSERT INTO transaksi (id_transaksi,no_coustomer,id_kasir,id_loker,kode_layanan,kode_parfum,harga ,pengambilan,status_pembayaran,tgl_transaksi )      VALUES('t3','cs2','k17','l3','ly7','p1',19000,'01/DEC/2017','Lunas','29/NOV/2017');               
+INSERT INTO transaksi (id_transaksi,no_coustomer,id_kasir,id_loker,kode_layanan,kode_parfum,harga ,pengambilan,status_pembayaran,tgl_transaksi )      VALUES('t4','cs3','k9','l4','ly3','p11',16500,'01/DEC/2017','Lunas','29/NOV/2017');               
+INSERT INTO transaksi (id_transaksi,no_coustomer,id_kasir,id_loker,kode_layanan,kode_parfum,harga ,pengambilan,status_pembayaran,tgl_transaksi )      VALUES('t5','cs10','k6','l5','ly19','p10',29000,'04/DEC/2017','Belum Lunas','02/DEC/2017');               
+INSERT INTO transaksi (id_transaksi,no_coustomer,id_kasir,id_loker,kode_layanan,kode_parfum,harga ,pengambilan,status_pembayaran,tgl_transaksi )      VALUES('t6','cs1','k12','l6','ly9','p18',15500,'04/DEC/2017','Lunas','02/DEC/2017');               
+INSERT INTO transaksi (id_transaksi,no_coustomer,id_kasir,id_loker,kode_layanan,kode_parfum,harga ,pengambilan,status_pembayaran,tgl_transaksi )      VALUES('t7','cs8','k15','l6','ly8','p20',22500,'03/DEC/2017','Lunas','01/DEC/2017');               
+INSERT INTO transaksi (id_transaksi,no_coustomer,id_kasir,id_loker,kode_layanan,kode_parfum,harga ,pengambilan,status_pembayaran,tgl_transaksi )      VALUES('t8','cs10','k20','l7','ly5','p20',25500,'07/DEC/2017','Belum Lunas','05/DEC/2017');               
+INSERT INTO transaksi (id_transaksi,no_coustomer,id_kasir,id_loker,kode_layanan,kode_parfum,harga ,pengambilan,status_pembayaran,tgl_transaksi )      VALUES('t9','cs17','k16','l7','ly16','p14',12500,'08/DEC/2017','Belum Lunas','06/DEC/2017');               
+INSERT INTO transaksi (id_transaksi,no_coustomer,id_kasir,id_loker,kode_layanan,kode_parfum,harga ,pengambilan,status_pembayaran,tgl_transaksi )      VALUES('t10','cs15','k13','l8','ly17','p14',24500,'10/DEC/2017','Lunas','08/DEC/2017');               
+                       
+                  
+           
+     
+     
+
+
